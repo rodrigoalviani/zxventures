@@ -1,0 +1,8 @@
+{
+  "test": {
+    "db": "zxventures_test"
+  },
+  "prd": {
+    "db": "zxventures"
+  }
+}

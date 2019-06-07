@@ -1,0 +1,31 @@
+{
+  "name": "zxventures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "export NODE_ENV=prd && export MONGODB=\"mongodb://localhost:27017\" && node app.js",
+    "test": "export NODE_ENV=test && export MONGODB=\"mongodb://localhost:27017\" && node ./fixtures/importJSON.js && nyc mocha test/*.test.js",
+    "deploy": "export NODE_ENV=prd && export MONGODB=\"mongodb://localhost:27017\" && node ./fixtures/importJSON.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-sanitizer": "^1.0.5",
+    "inflection": "^1.12.0",
+    "mongoose": "^5.5.12"
+  }
+}
